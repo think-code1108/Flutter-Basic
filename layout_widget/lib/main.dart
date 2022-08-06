@@ -32,7 +32,12 @@ class _MyHomePageState extends State<MyHomePage> {
       length: 2,
       child: Scaffold(
           backgroundColor: Colors.teal,
-          body: const TabBarView(children: [HomePage(), ProfilePage()]),
+          body: const TabBarView(
+            children: [
+              HomePage(),
+              ProfilePage(),
+            ],
+          ),
           bottomNavigationBar: ConvexAppBar(
             backgroundColor: Colors.amber,
             color: Colors.white,
@@ -65,80 +70,76 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const CircleAvatar(
-            backgroundImage: AssetImage("images/pic.png"),
-            radius: 50.0,
-          ),
-          Text(
-            'Filip Hracek',
-            style: GoogleFonts.pacifico(
-              fontSize: 35.0,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const Text(
-            'Flutter Developer',
-            style: TextStyle(
-              fontSize: 20.0,
-              letterSpacing: 1.5,
-              color: Colors.white,
-            ),
-          ),
-          const Text(
-            'Coding & Learn a new thing!',
-            style: TextStyle(
-              fontSize: 20.0,
-              letterSpacing: 1.5,
-              color: Colors.white,
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.all(10.0),
-            margin:
-                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const CircleAvatar(
+          backgroundImage: AssetImage("images/pic.png"),
+          radius: 50.0,
+        ),
+        Text(
+          'Filip Hracek',
+          style: GoogleFonts.pacifico(
+            fontSize: 35.0,
             color: Colors.white,
-            child: Row(
-              children: const [
-                Padding(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const Text(
+          'Flutter Developer',
+          style: TextStyle(
+            fontSize: 20.0,
+            letterSpacing: 1.5,
+            color: Colors.white,
+          ),
+        ),
+        const Text(
+          'Coding & Learn a new thing!',
+          style: TextStyle(
+            fontSize: 20.0,
+            letterSpacing: 1.5,
+            color: Colors.white,
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.all(10.0),
+          margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+          color: Colors.white,
+          child: Row(
+            children: const [
+              Padding(
                   padding: EdgeInsets.only(right: 10.0, left: 10.0),
                   child: Icon(
                     Icons.phone_android,
                     color: Colors.teal,
-                  ),
-                ),
-                Text(
-                  '0818909090',
-                  style: TextStyle(color: Colors.teal, fontSize: 20.0),
-                ),
-              ],
-            ),
+                  )),
+              Text(
+                '0818909090',
+                style: TextStyle(color: Colors.teal, fontSize: 20.0),
+              ),
+            ],
           ),
-          Container(
-            padding: const EdgeInsets.all(10.0),
-            margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 25.0),
-            color: Colors.white,
-            child: Row(
-              children: const [
-                Padding(
+        ),
+        Container(
+          padding: const EdgeInsets.all(10.0),
+          margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 25.0),
+          color: Colors.white,
+          child: Row(
+            children: const [
+              Padding(
                   padding: EdgeInsets.only(right: 10.0, left: 10.0),
                   child: Icon(
                     Icons.email,
                     color: Colors.teal,
-                  ),
-                ),
-                Text(
-                  'flutter_dev@umb.ac.id',
-                  style: TextStyle(color: Colors.teal, fontSize: 20.0),
-                ),
-              ],
-            ),
+                  )),
+              Text(
+                'flutter_dev@umb.ac.id',
+                style: TextStyle(color: Colors.teal, fontSize: 20.0),
+              ),
+            ],
           ),
-        ],
-      ),
-    );
+        ),
+      ],
+    ));
   }
 }
